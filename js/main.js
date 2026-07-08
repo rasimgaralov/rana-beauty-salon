@@ -43,8 +43,9 @@ window.scrollTo(0, 0);
   var lastW = window.innerWidth;
   function sizeCanvas() {
     var rect = heroCanvas.getBoundingClientRect();
-    heroCanvas.width  = rect.width || window.innerWidth;
-    heroCanvas.height = rect.height;
+    var dpr = window.devicePixelRatio || 1;
+    heroCanvas.width  = (rect.width || window.innerWidth) * dpr;
+    heroCanvas.height = rect.height * dpr;
     lastW = window.innerWidth;
   }
   sizeCanvas();
