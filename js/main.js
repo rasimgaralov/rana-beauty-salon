@@ -389,6 +389,20 @@ window.scrollTo(0, 0);
         var isCurrentlyOpen = list.classList.contains('open');
         var parentCard = this.closest('.category-card');
 
+        // Collapse all other subcategories inside the same category card
+        if (parentCard) {
+          parentCard.querySelectorAll('.services-subcategory').forEach(function (sub) {
+            if (sub !== subHeader) {
+              sub.classList.remove('active');
+            }
+          });
+          parentCard.querySelectorAll('.services-list').forEach(function (l) {
+            if (l !== list) {
+              l.classList.remove('open');
+              l.style.maxHeight = null;
+            }
+          });
+        }
 
         // Toggle active classes for the clicked item
         this.classList.toggle('active');
@@ -396,6 +410,14 @@ window.scrollTo(0, 0);
 
         if (!isCurrentlyOpen) {
           list.style.maxHeight = list.scrollHeight + 'px';
+          // Ensure the opened subcategory stays in view after other elements collapse
+          setTimeout(function() {
+            var rect = subHeader.getBoundingClientRect();
+            if (rect.top < 150 || rect.bottom > window.innerHeight) {
+              var offset = rect.top + window.pageYOffset - 150;
+              window.scrollTo({ top: offset, behavior: 'smooth' });
+            }
+          }, 420);
         } else {
           list.style.maxHeight = null;
         }
