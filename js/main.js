@@ -344,6 +344,13 @@ window.scrollTo(0, 0);
             if (item.classList.contains('active')) {
               content.style.maxHeight = 'none';
             }
+            
+            // Ensure the opened category card stays in view after others collapse
+            var rect = header.getBoundingClientRect();
+            if (rect.top < 150 || rect.bottom > window.innerHeight) {
+              var offset = rect.top + window.pageYOffset - 150;
+              window.scrollTo({ top: offset, behavior: 'smooth' });
+            }
           }, 500);
 
           // Re-observe reveal elements inside the newly shown content
