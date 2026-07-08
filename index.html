@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rana Beauty Salon — Nails, Hair &amp; Facials | Muscat, Oman</title>
+  <meta name="description"
+    content="Rana Beauty Salon — Premium nails, hair, facials and spa services in Qurm, Muscat, Oman. Book via WhatsApp.">
+
+  <!-- Google Fonts: Jost -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css?v=46">
+</head>
+
+<body>
+
+  <!-- ── LOADER ──────────────────────────────── -->
+  <div id="loader">
+    <video id="loaderVideo" autoplay muted playsinline></video>
+    <button id="skipBtn" class="loader-skip">Skip ✦</button>
+  </div>
+
+  <!-- ── NAVBAR ──────────────────────────────── -->
+  <div id="navOverlay" class="nav-overlay"></div>
+  <nav id="navbar" class="navbar">
+    <div class="nav-logo">
+      <a href="#">
+        <img src="assets/logo_transparent.png?v=3" alt="Rana Beauty Salon">
+      </a>
+    </div>
+    <button id="menuToggle" class="menu-toggle" aria-label="Menu">
+      <span class="menu-bar"></span>
+      <span class="menu-bar"></span>
+      <span class="menu-bar"></span>
+    </button>
+    <ul class="nav-links">
+      <li class="nav-links-lang"><a href="ar.html" class="lang-toggle">عربي</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li class="nav-links-cta"><a href="#" onclick="openBookingModal(); return false;">Book Now</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="#" onclick="openBookingModal(); return false;" class="nav-cta">Book Now</a>
+      <a href="ar.html" class="lang-toggle-desktop">عربي</a>
+    </div>
+  </nav>
+
+  <!-- ── HERO ────────────────────────────────── -->
+  <section id="hero">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-gradient"></div>
+
+    <!-- Top-left: Brand info -->
+    <div class="hero-info-left">
+      <div class="hero-overline">Hair · Nails · Face &amp; Eyes · Makeup · Body · Kids</div>
+      <div class="hero-brand-name">Rana Beauty Salon</div>
+      <p class="hero-tagline">Because you're one in a million ✨<br>Where beauty meets luxury at Rana in the heart of Muscat.</p>
+      <div class="hero-est">10K+ Clients Served</div>
+    </div>
+
+    <!-- Bottom-right: Location & CTA -->
+    <div class="hero-info-right">
+      <div class="hero-location">Muscat, Oman</div>
+      <div class="hero-branches">Qurm (DoubleTree by Hilton)</div>
+      <div class="hero-hours">Open Daily · 10:00 AM – 8:00 PM</div>
+      <a href="#" onclick="openBookingModal(); return false;" class="hero-book">
+        Book via WhatsApp
+        <span class="hero-book-arrow">→</span>
+      </a>
+    </div>
+
+    <!-- Bottom-center: Stats (visible on mobile only) -->
+    <div class="hero-info-bottom">
+      <div class="hero-est">10K+ Clients Served</div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="hero-scroll">
+      <div class="hero-scroll-line"></div>
+      <span class="hero-scroll-text">Scroll</span>
+    </div>
+  </section>
+
+  <!-- ── MARQUEE ──────────────────────────────── -->
+  <div class="marquee-section">
+    <div class="marquee-track">
+      <div class="marquee-item"><span>✦</span> Hair</div>
+      <div class="marquee-item"><span>✦</span> Nails</div>
+      <div class="marquee-item"><span>✦</span> Face &amp; Eyes</div>
+      <div class="marquee-item"><span>✦</span> Makeup</div>
+      <div class="marquee-item"><span>✦</span> Body</div>
+      <div class="marquee-item"><span>✦</span> Kids</div>
+      <div class="marquee-item"><span>✦</span> Hair</div>
+      <div class="marquee-item"><span>✦</span> Nails</div>
+      <div class="marquee-item"><span>✦</span> Face &amp; Eyes</div>
+      <div class="marquee-item"><span>✦</span> Makeup</div>
+      <div class="marquee-item"><span>✦</span> Body</div>
+      <div class="marquee-item"><span>✦</span> Kids</div>
+    </div>
+    <div class="marquee-track" aria-hidden="true">
+      <div class="marquee-item"><span>✦</span> Hair</div>
+      <div class="marquee-item"><span>✦</span> Nails</div>
+      <div class="marquee-item"><span>✦</span> Face &amp; Eyes</div>
+      <div class="marquee-item"><span>✦</span> Makeup</div>
+      <div class="marquee-item"><span>✦</span> Body</div>
+      <div class="marquee-item"><span>✦</span> Kids</div>
+      <div class="marquee-item"><span>✦</span> Hair</div>
+      <div class="marquee-item"><span>✦</span> Nails</div>
+      <div class="marquee-item"><span>✦</span> Face &amp; Eyes</div>
+      <div class="marquee-item"><span>✦</span> Makeup</div>
+      <div class="marquee-item"><span>✦</span> Body</div>
+      <div class="marquee-item"><span>✦</span> Kids</div>
+    </div>
+  </div>
+
+  <!-- ── ABOUT ────────────────────────────────── -->
+  <section id="about">
+    <div class="about-visual reveal">
+      <div class="about-img-frame">
+        <img src="assets/Rana_beauty_salon_about.jpeg" alt="Rana Beauty Salon Interior">
+      </div>
+    </div>
+    <div class="about-text">
+      <div class="about-text-top reveal">®️ Registered Brand · Muscat, Oman</div>
+      <h2 class="about-heading reveal reveal-delay-1">Where Beauty<br>Meets <em>Luxury</em></h2>
+      <p class="about-body reveal reveal-delay-2">
+        At Rana Beauty Salon, we offer a full spectrum of premium beauty services tailored to your unique style. Located at the luxurious DoubleTree by Hilton in Qurm, we create an elegant sanctuary where beauty meets ultimate relaxation. Because you're one in a million ✨
+      </p>
+      <p class="about-body reveal reveal-delay-3">
+        From bespoke hair styling and flawless nail artistry to professional lash enhancements, makeup, and rejuvenating body spa therapies, our expert team is dedicated to bringing out your inner glow.
+      </p>
+      <div class="about-divider reveal"></div>
+      <div class="about-features reveal">
+        <div class="about-feature">Hair &amp; Nails</div>
+        <div class="about-feature">Face &amp; Eyes</div>
+        <div class="about-feature">Makeup &amp; Body</div>
+      </div>
+      <div class="about-stats reveal">
+        <div class="about-stat-item">
+          <span class="about-stat-value">Years of</span>
+          <span class="about-stat-desc">Experience</span>
+        </div>
+        <div class="about-stat-item">
+          <span class="about-stat-value">10K+</span>
+          <span class="about-stat-desc">Clients Served</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SERVICES ─────────────────────────────── -->
+  <section id="services">
+    <div class="section-header reveal">
+      <div class="section-overline">What We Offer</div>
+      <h2 class="section-title"><span style="color: #fff;">Our</span> <em>Services</em></h2>
+    </div>
+    <!-- Category Cards Grid -->
+    <div class="category-cards-grid">
+
+      <!-- ─── CATEGORY CARD 1: HAIR ─── -->
+      <div class="category-card" id="card-hair">
+        <div class="category-card-header">
+          <img class="category-card-bg" src="assets/service_cat_hair.png" alt="Hair Services">
+          <div class="category-card-overlay"></div>
+          <div class="category-card-header-content">
+            <span class="category-card-num">01</span>
+            <div class="category-card-titles">
+              <h3 class="category-card-title">Hair</h3>
+              <p class="category-card-desc">Care &amp; Styling · Color · Treatments</p>
+            </div>
+            <span class="category-card-action">View Services</span>
+          </div>
+        </div>
+        <div class="category-card-content">
+          <div class="category-card-content-inner">
+            <div class="subcategory-banner">
+              <img src="assets/service_hair_styling.png" alt="Care & Styling">
+            </div>
+            <div class="services-subcategory">Care &amp; Styling</div>
+            <div class="services-list">
+              <div class="service-item">
+                <div class="service-item-name">Style Cut</div>
+                <div class="service-item-duration">40 min – 1 hr, 15 min</div>
+                <div class="service-item-price">from OMR 15</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Trim Cut</div>
+                <div class="service-item-duration">20 min – 45 min</div>
+                <div class="service-item-price">from OMR 5</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Face Frame</div>
+                <div class="service-item-duration">2 hr</div>
+                <div class="service-item-price">OMR 20</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Blow Dry</div>
+                <div class="service-item-duration">30 min – 1 hr</div>
+                <div class="service-item-price">from OMR 10</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Unlimited Blow Dry (1 Month)</div>
+                <div class="service-item-duration">1 hr</div>
+                <div class="service-item-price">OMR 35</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Babyliss Retro Hair</div>
+                <div class="service-item-duration">1 hr – 2 hr, 30 min</div>
+                <div class="service-item-price">from OMR 25</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Hair Upstyles</div>
+                <div class="service-item-duration">1 hr, 30 min – 2 hr</div>
+                <div class="service-item-price">from OMR 20</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Consultancy</div>
+                <div class="service-item-duration">10 min</div>
+                <div class="service-item-price">Free</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Hair Wash</div>
+                <div class="service-item-duration">15 min</div>
+                <div class="service-item-price">OMR 3</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Hair Dust Cleaning</div>
+                <div class="service-item-duration">1 hr</div>
+                <div class="service-item-price">OMR 20</div>
+              </div>
+            </div>
+
+            <div class="services-subcategory">Color &amp; Extensions</div>
+            <div class="services-list">
+              <div class="service-item">
+                <div class="service-item-name">Root Color</div>
+                <div class="service-item-duration">2 hr</div>
+                <div class="service-item-price">OMR 20</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Full Color</div>
+                <div class="service-item-duration">1 hr, 30 min</div>
+                <div class="service-item-price">from OMR 25</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Toner</div>
+                <div class="service-item-duration">40 min</div>
+                <div class="service-item-price">from OMR 10</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Highlight Frame</div>
+                <div class="service-item-duration">2 hr</div>
+                <div class="service-item-price">OMR 20</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Partial Highlights</div>
+                <div class="service-item-duration">3 hr</div>
+                <div class="service-item-price">from OMR 20</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Full Highlights</div>
+                <div class="service-item-duration">4 hr, 30 min – 5 hr</div>
+                <div class="service-item-price">from OMR 35</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Hair Extension Application</div>
+                <div class="service-item-duration">1 hr</div>
+                <div class="service-item-price">from OMR 50</div>
+              </div>
+            </div>
+
+            <div class="services-subcategory">Premium Treatments</div>
+            <div class="services-list">
+              <div class="service-item discount">
+                <div class="service-item-name">
+                  Brazilian Style Keratin
+                  <span class="price-discount-badge">Save 20%</span>
+                </div>
+                <div class="service-item-duration">2 hr, 30 min – 5 hr</div>
+                <div class="service-item-price">
+                  <span class="price-old">OMR 35</span>
+                  <span class="price-current">from OMR 28</span>
+                </div>
+              </div>
+              <div class="service-item discount">
+                <div class="service-item-name">
+                  Organic Botox
+                  <span class="price-discount-badge">Save 20%</span>
+                </div>
+                <div class="service-item-duration">1 hr, 30 min – 2 hr, 30 min</div>
+                <div class="service-item-price">
+                  <span class="price-old">OMR 25</span>
+                  <span class="price-current">from OMR 20</span>
+                </div>
+              </div>
+              <div class="service-item discount">
+                <div class="service-item-name">
+                  Protein Treatment
+                  <span class="price-discount-badge">Save 20%</span>
+                </div>
+                <div class="service-item-duration">2 hr, 30 min – 4 hr, 30 min</div>
+                <div class="service-item-price">
+                  <span class="price-old">OMR 30</span>
+                  <span class="price-current">from OMR 24</span>
+                </div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Renewal Treatment</div>
+                <div class="service-item-duration">1 hr</div>
+                <div class="service-item-price">from OMR 20</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Hydration Treatment</div>
+                <div class="service-item-duration">1 hr</div>
+                <div class="service-item-price">from OMR 20</div>
+              </div>
+              <div class="service-item discount">
+                <div class="service-item-name">
+                  Scalp Care
+                  <span class="price-discount-badge">Save 20%</span>
+                </div>
+                <div class="service-item-duration">1 hr</div>
+                <div class="service-item-price">
+                  <span class="price-old">OMR 20</span>
+                  <span class="price-current">from OMR 16</span>
+                </div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Hair Fall Treatment (5 Sessions)</div>
+                <div class="service-item-duration">30 min</div>
+                <div class="service-item-price">OMR 25</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Hair Treatment (After Coloring)</div>
+                <div class="service-item-duration">30 min</div>
+                <div class="service-item-price">OMR 10</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Hair Spa</div>
+                <div class="service-item-duration">30 min</div>
+                <div class="service-item-price">OMR 10</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ─── CATEGORY CARD 2: NAIL ─── -->
+      <div class="category-card" id="card-nail">
+        <div class="category-card-header">
+          <img class="category-card-bg" src="assets/service_cat_nail.png" alt="Nail Services">
+          <div class="category-card-overlay"></div>
+          <div class="category-card-header-content">
+            <span class="category-card-num">02</span>
+            <div class="category-card-titles">
+              <h3 class="category-card-title">Nail</h3>
+              <p class="category-card-desc">Classic Care · Gel &amp; Russian · Extensions</p>
+            </div>
+            <span class="category-card-action">View Services</span>
+          </div>
+        </div>
+        <div class="category-card-content">
+          <div class="category-card-content-inner">
+            <div class="services-subcategory">Classic Care</div>
+            <div class="services-list">
+              <div class="service-item">
+                <div class="service-item-name">Manicure &amp; Pedicure (No Polish)</div>
+                <div class="service-item-duration">1 hr</div>
+                <div class="service-item-price">OMR 15</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Manicure &amp; Pedicure (Normal Polish)</div>
+                <div class="service-item-duration">1 hr</div>
+                <div class="service-item-price">OMR 18</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Classic Machine Manicure (No Polish / Normal Polish)</div>
+                <div class="service-item-duration">—</div>
+                <div class="service-item-price">OMR 8.5 / OMR 10</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Classic Machine Pedicure (No Polish / Normal Polish)</div>
+                <div class="service-item-duration">—</div>
+                <div class="service-item-price">OMR 8.5 / OMR 10</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Foot Spa Massage</div>
+                <div class="service-item-duration">45 min</div>
+                <div class="service-item-price">OMR 15</div>
+              </div>
+            </div>
+
+            <div class="subcategory-banner">
+              <img src="assets/service_gel_manicure.png" alt="Gel & Russian Polish">
+            </div>
+            <div class="services-subcategory">Gel &amp; Russian Polish</div>
+            <div class="services-list">
+              <div class="service-item">
+                <div class="service-item-name">Russian Manicure Gel Polish</div>
+                <div class="service-item-duration">2 hr</div>
+                <div class="service-item-price">OMR 18</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Russian Smart Gel Polish Pedicure</div>
+                <div class="service-item-duration">1 hr, 30 min</div>
+                <div class="service-item-price">OMR 18</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Manicure &amp; Pedicure (Gel Polish)</div>
+                <div class="service-item-duration">1 hr</div>
+                <div class="service-item-price">OMR 38</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Manicure French Gel Polish</div>
+                <div class="service-item-duration">2 hr</div>
+                <div class="service-item-price">OMR 19</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Gel Polish Application (Without Manicure / Pedicure)</div>
+                <div class="service-item-duration">—</div>
+                <div class="service-item-price">OMR 11 / OMR 12</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Normal Polish</div>
+                <div class="service-item-duration">20 min</div>
+                <div class="service-item-price">OMR 3</div>
+              </div>
+            </div>
+
+            <div class="subcategory-banner">
+              <img src="assets/service_acrylic_extensions.png" alt="Extensions & Repair">
+            </div>
+            <div class="services-subcategory">Extensions &amp; Repair</div>
+            <div class="services-list">
+              <div class="service-item">
+                <div class="service-item-name">Acrylic Extension</div>
+                <div class="service-item-duration">1 hr</div>
+                <div class="service-item-price">OMR 25</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Polygel Extension</div>
+                <div class="service-item-duration">2 hr, 45 min</div>
+                <div class="service-item-price">OMR 37</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Nail Tips (Gel)</div>
+                <div class="service-item-duration">1 hr, 20 min</div>
+                <div class="service-item-price">OMR 19</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Manicure &amp; Hard Gel</div>
+                <div class="service-item-duration">1 hr, 45 min</div>
+                <div class="service-item-price">OMR 27</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Extension Refill (Without Manicure)</div>
+                <div class="service-item-duration">20 min</div>
+                <div class="service-item-price">OMR 8</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Nail Repair</div>
+                <div class="service-item-duration">30 min</div>
+                <div class="service-item-price">OMR 2</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Cut &amp; File</div>
+                <div class="service-item-duration">15 min</div>
+                <div class="service-item-price">OMR 5</div>
+              </div>
+            </div>
+
+            <div class="subcategory-banner">
+              <img src="assets/service_nail_art.png" alt="Art & Add-ons">
+            </div>
+            <div class="services-subcategory">Art &amp; Add-ons</div>
+            <div class="services-list">
+              <div class="service-item">
+                <div class="service-item-name">Nail Art (Per Finger)</div>
+                <div class="service-item-duration">30 min</div>
+                <div class="service-item-price">OMR 2</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Chrome</div>
+                <div class="service-item-duration">15 min</div>
+                <div class="service-item-price">OMR 2</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Ombre</div>
+                <div class="service-item-duration">15 min</div>
+                <div class="service-item-price">OMR 2</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Powder Design Application</div>
+                <div class="service-item-duration">5 min</div>
+                <div class="service-item-price">OMR 3</div>
+              </div>
+            </div>
+
+            <div class="services-subcategory">Removals</div>
+            <div class="services-list">
+              <div class="service-item">
+                <div class="service-item-name">Gel Removal</div>
+                <div class="service-item-duration">30 min</div>
+                <div class="service-item-price">OMR 2</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Gel Extension Removal</div>
+                <div class="service-item-duration">20 min</div>
+                <div class="service-item-price">OMR 4</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ─── CATEGORY CARD 3: FACE & EYE ─── -->
+      <div class="category-card" id="card-face">
+        <div class="category-card-header">
+          <img class="category-card-bg" src="assets/service_cat_face.png" alt="Face &amp; Eye Services">
+          <div class="category-card-overlay"></div>
+          <div class="category-card-header-content">
+            <span class="category-card-num">03</span>
+            <div class="category-card-titles">
+              <h3 class="category-card-title">Face &amp; Eye</h3>
+              <p class="category-card-desc">Skin Care · Lash Extensions · Lifting &amp; Tinting</p>
+            </div>
+            <span class="category-card-action">View Services</span>
+          </div>
+        </div>
+        <div class="category-card-content">
+          <div class="category-card-content-inner">
+            <div class="subcategory-banner">
+              <img src="assets/service_facials.png" alt="Skin Care">
+            </div>
+            <div class="services-subcategory">Skin Care</div>
+            <div class="services-list">
+              <div class="service-item">
+                <div class="service-item-name">Hydro Facial</div>
+                <div class="service-item-duration">45 min</div>
+                <div class="service-item-price">OMR 20</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Vitamin Treatment</div>
+                <div class="service-item-duration">30 min</div>
+                <div class="service-item-price">OMR 10</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Collagen Treatment</div>
+                <div class="service-item-duration">1 hr</div>
+                <div class="service-item-price">OMR 10</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Charcoal Masking</div>
+                <div class="service-item-duration">30 min</div>
+                <div class="service-item-price">OMR 10</div>
+              </div>
+            </div>
+
+            <div class="services-subcategory">Lash Extensions</div>
+            <div class="services-list">
+              <div class="service-item">
+                <div class="service-item-name">Classic Lash Extensions</div>
+                <div class="service-item-duration">1 hr, 30 min</div>
+                <div class="service-item-price">from OMR 28</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">2D Volume Lashes</div>
+                <div class="service-item-duration">1 hr, 20 min</div>
+                <div class="service-item-price">OMR 30</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">3D Volume Lashes</div>
+                <div class="service-item-duration">1 hr, 30 min</div>
+                <div class="service-item-price">OMR 35</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">4D Volume Lashes</div>
+                <div class="service-item-duration">1 hr, 40 min</div>
+                <div class="service-item-price">OMR 40</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Mega Volume Lashes</div>
+                <div class="service-item-duration">1 hr, 40 min</div>
+                <div class="service-item-price">OMR 45</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Special Effect Lashes (Kylie / Wet / Eyeliner / American / Doll / Cat Eye)</div>
+                <div class="service-item-duration">1 hr, 30 min</div>
+                <div class="service-item-price">from OMR 40</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Corner Eyelashes</div>
+                <div class="service-item-duration">1 hr</div>
+                <div class="service-item-price">OMR 15</div>
+              </div>
+            </div>
+
+            <div class="services-subcategory">Lash Refills</div>
+            <div class="services-list">
+              <div class="service-item">
+                <div class="service-item-name">Classic Refill (2 Weeks)</div>
+                <div class="service-item-duration">1 hr</div>
+                <div class="service-item-price">OMR 20</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">2D + Kylie Effect Refill</div>
+                <div class="service-item-duration">1 hr</div>
+                <div class="service-item-price">OMR 22</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">3D Volume Refill</div>
+                <div class="service-item-duration">1 hr</div>
+                <div class="service-item-price">from OMR 25</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Mega Volume Refill</div>
+                <div class="service-item-duration">1 hr</div>
+                <div class="service-item-price">OMR 24</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Lash Removal</div>
+                <div class="service-item-duration">1 hr</div>
+                <div class="service-item-price">OMR 4</div>
+              </div>
+            </div>
+
+            <div class="services-subcategory">Lifting, Tinting &amp; Shaping</div>
+            <div class="services-list">
+              <div class="service-item">
+                <div class="service-item-name">Eyelash Lifting</div>
+                <div class="service-item-duration">1 hr</div>
+                <div class="service-item-price">OMR 15</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Eyebrow Lamination</div>
+                <div class="service-item-duration">1 hr</div>
+                <div class="service-item-price">OMR 15</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Eyebrow Tinting</div>
+                <div class="service-item-duration">20 min</div>
+                <div class="service-item-price">OMR 8</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Eyelash Tinting</div>
+                <div class="service-item-duration">20 min</div>
+                <div class="service-item-price">OMR 8</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Lash Tinting &amp; Brows</div>
+                <div class="service-item-duration">20 min</div>
+                <div class="service-item-price">from OMR 5</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Eyebrow Shaping</div>
+                <div class="service-item-duration">20 min</div>
+                <div class="service-item-price">OMR 5</div>
+              </div>
+            </div>
+
+            <div class="services-subcategory">Permanent Makeup</div>
+            <div class="services-list">
+              <div class="service-item">
+                <div class="service-item-name">Eyebrows Permanent Makeup</div>
+                <div class="service-item-duration">2 hr, 30 min</div>
+                <div class="service-item-price">OMR 100</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Lips Permanent Makeup</div>
+                <div class="service-item-duration">1 hr</div>
+                <div class="service-item-price">OMR 75</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Eye Permanent Makeup</div>
+                <div class="service-item-duration">2 hr, 30 min</div>
+                <div class="service-item-price">OMR 50</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ─── CATEGORY CARD 4: MAKEUP ─── -->
+      <div class="category-card" id="card-makeup">
+        <div class="category-card-header">
+          <img class="category-card-bg" src="assets/service_cat_makeup.png" alt="Makeup Services">
+          <div class="category-card-overlay"></div>
+          <div class="category-card-header-content">
+            <span class="category-card-num">04</span>
+            <div class="category-card-titles">
+              <h3 class="category-card-title">Makeup</h3>
+              <p class="category-card-desc">Bridal Packages · Occasion Makeup</p>
+            </div>
+            <span class="category-card-action">View Services</span>
+          </div>
+        </div>
+        <div class="category-card-content">
+          <div class="category-card-content-inner">
+            <div class="services-subcategory">Bridal &amp; Packages</div>
+            <div class="services-list">
+              <div class="service-item">
+                <div class="service-item-name">Bridal Package (Facial, Gel Mani/Pedi, Brows, Hair, Makeup)</div>
+                <div class="service-item-duration">10 hr</div>
+                <div class="service-item-price">OMR 250</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Bridal Makeup</div>
+                <div class="service-item-duration">3 hr</div>
+                <div class="service-item-price">OMR 125</div>
+              </div>
+            </div>
+
+            <div class="services-subcategory">Occasion Makeup</div>
+            <div class="services-list">
+              <div class="service-item">
+                <div class="service-item-name">Engagement Makeup</div>
+                <div class="service-item-duration">2 hr</div>
+                <div class="service-item-price">OMR 85</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Arabic Makeup</div>
+                <div class="service-item-duration">2 hr</div>
+                <div class="service-item-price">OMR 40</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Halloween Makeup</div>
+                <div class="service-item-duration">2 hr</div>
+                <div class="service-item-price">OMR 50</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Light Makeup</div>
+                <div class="service-item-duration">1 hr, 30 min</div>
+                <div class="service-item-price">OMR 30</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ─── CATEGORY CARD 5: BODY ─── -->
+      <div class="category-card" id="card-body">
+        <div class="category-card-header">
+          <img class="category-card-bg" src="assets/service_cat_body.png" alt="Body Services">
+          <div class="category-card-overlay"></div>
+          <div class="category-card-header-content">
+            <span class="category-card-num">05</span>
+            <div class="category-card-titles">
+              <h3 class="category-card-title">Body</h3>
+              <p class="category-card-desc">Waxing · Facial Removal</p>
+            </div>
+            <span class="category-card-action">View Services</span>
+          </div>
+        </div>
+        <div class="category-card-content">
+          <div class="category-card-content-inner">
+            <div class="services-subcategory">Waxing &amp; Hair Removal</div>
+            <div class="services-list">
+              <div class="service-item">
+                <div class="service-item-name">Full Body</div>
+                <div class="service-item-duration">1 hr</div>
+                <div class="service-item-price">OMR 27</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Full Legs</div>
+                <div class="service-item-duration">35 min</div>
+                <div class="service-item-price">OMR 12</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Half Legs</div>
+                <div class="service-item-duration">25 min</div>
+                <div class="service-item-price">OMR 9</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Full Arms</div>
+                <div class="service-item-duration">30 min</div>
+                <div class="service-item-price">OMR 8</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Half Arms</div>
+                <div class="service-item-duration">20 min</div>
+                <div class="service-item-price">OMR 6</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Underarm</div>
+                <div class="service-item-duration">30 min</div>
+                <div class="service-item-price">OMR 3</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Full Bikini</div>
+                <div class="service-item-duration">35 min</div>
+                <div class="service-item-price">OMR 13</div>
+              </div>
+            </div>
+
+            <div class="services-subcategory">Facial Removal</div>
+            <div class="services-list">
+              <div class="service-item">
+                <div class="service-item-name">Face Shaving</div>
+                <div class="service-item-duration">45 min</div>
+                <div class="service-item-price">OMR 3</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Upper Lip</div>
+                <div class="service-item-duration">10 min</div>
+                <div class="service-item-price">OMR 2</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ─── CATEGORY CARD 6: KIDS ─── -->
+      <div class="category-card" id="card-kids">
+        <div class="category-card-header">
+          <img class="category-card-bg" src="assets/service_cat_kids.png" alt="Kids Services">
+          <div class="category-card-overlay"></div>
+          <div class="category-card-header-content">
+            <span class="category-card-num">06</span>
+            <div class="category-card-titles">
+              <h3 class="category-card-title">Kids</h3>
+              <p class="category-card-desc">Haircuts &amp; Styling</p>
+            </div>
+            <span class="category-card-action">View Services</span>
+          </div>
+        </div>
+        <div class="category-card-content">
+          <div class="category-card-content-inner">
+            <div class="services-subcategory">Haircuts</div>
+            <div class="services-list">
+              <div class="service-item">
+                <div class="service-item-name">Boys Haircut</div>
+                <div class="service-item-duration">1 hr</div>
+                <div class="service-item-price">OMR 7</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Kids Haircut (Above 5 cm)</div>
+                <div class="service-item-duration">40 min</div>
+                <div class="service-item-price">OMR 10</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">Kids Haircut Trim (Up to 5 cm) &amp; Blow Dry</div>
+                <div class="service-item-duration">30 min</div>
+                <div class="service-item-price">from OMR 8</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── GALLERY ──────────────────────────────── -->
+  <section id="gallery">
+    <div class="section-header reveal">
+      <div class="section-overline">Our Work</div>
+      <h2 class="section-title"><em>Gallery</em></h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item reveal">
+        <img src="assets/gallery_1.png?v=3" alt="Russian Manicure &amp; Nail Art">
+        <div class="gallery-label">Nails</div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-1">
+        <img src="assets/gallery_2.png?v=3" alt="Premium Hair Styling &amp; Blow Dry">
+        <div class="gallery-label">Hair</div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-2">
+        <img src="assets/gallery_3.png?v=3" alt="Professional Lash Extensions">
+        <div class="gallery-label">Face &amp; Eyes</div>
+      </div>
+      <div class="gallery-item reveal">
+        <img src="assets/gallery_4.png?v=3" alt="Bridal &amp; Evening Glam Makeup">
+        <div class="gallery-label">Makeup</div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-1">
+        <img src="assets/gallery_5.png?v=3" alt="Luxury Spa Body massage and hot stones">
+        <div class="gallery-label">Body</div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-2">
+        <img src="assets/gallery_6.png?v=3" alt="Gentle kids nail and manicure pampering">
+        <div class="gallery-label">Kids</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TEAM ─────────────────────────────────── -->
+  <section id="team">
+    <div class="section-header reveal">
+      <div class="section-overline">Our Experts</div>
+      <h2 class="section-title">Meet The <em>Team</em></h2>
+    </div>
+    <div class="team-grid">
+      <div class="team-member reveal">
+        <div class="team-img-wrap">
+          <img src="assets/team_mehrsa.jpeg?v=1" alt="Mehrsa - Hair Dresser">
+        </div>
+        <h3 class="team-name">Mehrsa</h3>
+        <p class="team-role">Hair Dresser</p>
+      </div>
+      <div class="team-member reveal reveal-delay-1">
+        <div class="team-img-wrap">
+          <img src="assets/team_naz.jpeg?v=1" alt="Naz - Nail Master">
+        </div>
+        <h3 class="team-name">Naz</h3>
+        <p class="team-role">Nail Master</p>
+      </div>
+      <div class="team-member reveal reveal-delay-2">
+        <div class="team-img-wrap">
+          <img src="assets/team_jasmina.jpeg?v=1" alt="Jasmina - Nail Master">
+        </div>
+        <h3 class="team-name">Jasmina</h3>
+        <p class="team-role">Nail Master</p>
+      </div>
+      <div class="team-member reveal">
+        <div class="team-img-wrap">
+          <img src="assets/team_fereshteh.jpeg?v=1" alt="Fereshteh - Lash Master">
+        </div>
+        <h3 class="team-name">Fereshteh</h3>
+        <p class="team-role">Lash Master</p>
+      </div>
+      <div class="team-member reveal reveal-delay-1">
+        <div class="team-img-wrap">
+          <img src="assets/team_sogol.jpg?v=1" alt="Sogol M">
+        </div>
+        <h3 class="team-name">Sogol M</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── REVIEWS ──────────────────────────────── -->
+  <section id="reviews">
+    <div class="section-header reveal">
+      <div class="section-overline">Client Stories</div>
+      <h2 class="section-title">What They <em>Say</em></h2>
+    </div>
+    <div class="testimonials-wrap reveal">
+      <div class="testimonial-item active">
+        <div class="testimonial-stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span
+            class="star">★</span><span class="star">★</span>
+        </div>
+        <p class="testimonial-quote">Rana Beauty Salon is the absolute best for Russian manicures in Muscat! The detail, cleanliness, and professionalism of the nail team are unmatched. My go-to salon in Qurm.</p>
+        <div class="testimonial-author">— Google Reviewer</div>
+      </div>
+      <div class="testimonial-item">
+        <div class="testimonial-stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span
+            class="star">★</span><span class="star">★</span>
+        </div>
+        <p class="testimonial-quote">Very nice service, cute ladies. Had a wonderful experience with their hair treatments and styling. They really listen to what you want. Thank you very much!</p>
+        <div class="testimonial-author">— Samara K. (Fresha Review)</div>
+      </div>
+      <div class="testimonial-item">
+        <div class="testimonial-stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span
+            class="star">★</span><span class="star">★</span>
+        </div>
+        <p class="testimonial-quote">Beautiful salon inside DoubleTree by Hilton. The smart gel polish and lash services are top-notch and last for weeks. Extremely professional and elegant environment.</p>
+        <div class="testimonial-author">— Instagram Review</div>
+      </div>
+      <div class="testimonial-item">
+        <div class="testimonial-stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span
+            class="star">★</span><span class="star">★</span>
+        </div>
+        <p class="testimonial-quote">Highly recommend Rana Beauty Salon! The staff is extremely welcoming and the service is always exceptional. I've done my eyelashes and brows here, and they look stunning.</p>
+        <div class="testimonial-author">— Facebook Review</div>
+      </div>
+      <div class="testimonial-item">
+        <div class="testimonial-stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span
+            class="star">★</span><span class="star">★</span>
+        </div>
+        <p class="testimonial-quote">Absolutely loved my hair color and blow dry! They pay close attention to detail and make sure you leave happy. Easily the best beauty salon in Muscat.</p>
+        <div class="testimonial-author">— Google Reviewer</div>
+      </div>
+      <div class="testimonial-nav">
+        <button class="t-dot active" data-index="0"></button>
+        <button class="t-dot" data-index="1"></button>
+        <button class="t-dot" data-index="2"></button>
+        <button class="t-dot" data-index="3"></button>
+        <button class="t-dot" data-index="4"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── BOOKING ──────────────────────────────── -->
+  <section id="booking">
+    <div class="booking-inner">
+      <div class="section-overline reveal">Reserve Your Visit</div>
+      <h2 class="section-title reveal reveal-delay-1">Book an <em>Appointment</em></h2>
+      <p class="booking-desc reveal reveal-delay-2">
+        Send us a message on WhatsApp and our team will confirm your appointment. Located at DoubleTree by Hilton, Qurm.
+      </p>
+      <div class="booking-branches reveal reveal-delay-3">
+        <div class="booking-branch">
+          <a href="https://maps.app.goo.gl/n6UYVj7jv4aNp2c46" target="_blank"
+            class="booking-branch-name">📍 Qurm (DoubleTree by Hilton)</a>
+          <div class="booking-branch-phone"><a href="https://wa.me/96898999262">+968 9899 9262</a></div>
+          <div class="booking-branch-hours">Sat – Thu · 10:00 AM – 8:00 PM</div>
+          <div class="booking-branch-actions">
+            <a href="#" onclick="openBookingModal('qurm'); return false;" class="btn-branch-whatsapp">Book via
+              WhatsApp →</a>
+            <a href="https://maps.app.goo.gl/n6UYVj7jv4aNp2c46" target="_blank"
+              class="btn-branch-direction">Get Direction →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ───────────────────────────────── -->
+  <footer>
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">Rana Beauty Salon</div>
+        <p class="footer-tagline">Nails, Hair &amp; Lash Services in Muscat, Oman. Where beauty meets luxury in the heart of Muscat.</p>
+
+
+      </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <ul class="footer-links">
+          <li><a href="#services">Hair</a></li>
+          <li><a href="#services">Nail</a></li>
+          <li><a href="#services">Face &amp; Eye</a></li>
+          <li><a href="#services">Makeup</a></li>
+          <li><a href="#services">Body</a></li>
+          <li><a href="#services">Kids</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Navigate</div>
+        <ul class="footer-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#" onclick="openBookingModal(); return false;">Book Now</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <div class="footer-contact-item"><a href="https://maps.app.goo.gl/n6UYVj7jv4aNp2c46"
+            target="_blank">📍 Qurm (DoubleTree by Hilton)</a><br><a href="https://wa.me/96898999262">+968 9899 9262</a></div>
+        <div class="footer-contact-item">🕙 Sat – Thu: 10:00 AM – 8:00 PM</div>
+        <div class="footer-contact-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1.5" style="vertical-align:-2px;margin-right:4px">
+            <rect x="2" y="2" width="20" height="20" rx="5" />
+            <circle cx="12" cy="12" r="4" />
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+          </svg><a href="https://instagram.com/rana.beauty.om" target="_blank">@rana.beauty.om</a></div>
+        <div class="footer-contact-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1.5" style="vertical-align:-2px;margin-right:4px">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+          </svg><a href="https://www.facebook.com/590631990792744?ref=NONE_xav_ig_profile_page_web" target="_blank">Rana Beauty Salon</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 <span>Rana Beauty®</span> · Nails, Hair &amp; Facials · Muscat, Oman</div>
+      <div class="footer-copy">Powered by <span>Land Of Fire Enterprisess</span></div>
+      <div class="footer-copy">Where beauty meets <span>luxury</span> ✨</div>
+    </div>
+  </footer>
+
+  <!-- ── BOOKING MODAL ────────────────────────── -->
+  <div id="bookingModal" class="booking-modal">
+    <div class="booking-modal-overlay"></div>
+    <div class="booking-modal-content">
+      <button class="booking-modal-close" onclick="closeBookingModal()">&times;</button>
+      <div class="booking-modal-header">
+        <div class="booking-modal-overline">Reserve Your Visit</div>
+        <h3 class="booking-modal-title">Book an <em>Appointment</em></h3>
+        <p class="booking-modal-subtitle">Fill in the details below and we'll confirm your appointment via WhatsApp.</p>
+      </div>
+      <form id="bookingForm" class="booking-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="bookName">Full Name</label>
+            <input type="text" id="bookName" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <label for="bookPhone">Phone Number</label>
+            <input type="tel" id="bookPhone" placeholder="+968 ..." required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="bookBranch">Branch</label>
+            <select id="bookBranch" required>
+              <option value="qurm" selected>📍 Qurm (DoubleTree by Hilton)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="bookService">Service</label>
+            <select id="bookService" required>
+              <option value="" disabled selected>Select service</option>
+              <optgroup label="Hair">
+                <option value="Style Cut">Style Cut</option>
+                <option value="Trim Cut">Trim Cut</option>
+                <option value="Blow Dry">Blow Dry</option>
+                <option value="Hair Color">Hair Color</option>
+                <option value="Highlights">Highlights</option>
+                <option value="Keratin Treatment">Keratin Treatment</option>
+                <option value="Hair Extension">Hair Extension</option>
+                <option value="Hair Treatment">Hair Treatment</option>
+              </optgroup>
+              <optgroup label="Nail">
+                <option value="Manicure &amp; Pedicure">Manicure &amp; Pedicure</option>
+                <option value="Gel Polish">Gel Polish</option>
+                <option value="Russian Manicure">Russian Manicure</option>
+                <option value="Acrylic Extension">Acrylic Extension</option>
+                <option value="Nail Art">Nail Art</option>
+                <option value="Nail Removal">Nail Removal</option>
+              </optgroup>
+              <optgroup label="Face &amp; Eye">
+                <option value="Hydro Facial">Hydro Facial</option>
+                <option value="Lash Extensions">Lash Extensions</option>
+                <option value="Lash Refill">Lash Refill</option>
+                <option value="Eyebrow Lamination">Eyebrow Lamination</option>
+                <option value="Permanent Makeup">Permanent Makeup</option>
+              </optgroup>
+              <optgroup label="Makeup">
+                <option value="Bridal Package">Bridal Package</option>
+                <option value="Bridal Makeup">Bridal Makeup</option>
+                <option value="Engagement Makeup">Engagement Makeup</option>
+                <option value="Light Makeup">Light Makeup</option>
+              </optgroup>
+              <optgroup label="Body">
+                <option value="Full Body Wax">Full Body Wax</option>
+                <option value="Legs Wax">Legs Wax</option>
+                <option value="Arms Wax">Arms Wax</option>
+                <option value="Bikini Wax">Bikini Wax</option>
+              </optgroup>
+              <optgroup label="Kids">
+                <option value="Boys Haircut">Boys Haircut</option>
+                <option value="Kids Haircut">Kids Haircut</option>
+              </optgroup>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row" id="specialistRow" style="display: none;">
+          <div class="form-group" style="grid-column: 1 / -1;">
+            <label for="bookSpecialist">Preferred Specialist <span class="optional">(optional)</span></label>
+            <select id="bookSpecialist">
+              <option value="" selected>No preference</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="bookDate">Preferred Date</label>
+            <input type="date" id="bookDate" required>
+          </div>
+          <div class="form-group">
+            <label for="bookTime">Preferred Time</label>
+            <select id="bookTime" required>
+              <option value="" disabled selected>Select time</option>
+              <option value="10:00 AM">10:00 AM</option>
+              <option value="11:00 AM">11:00 AM</option>
+              <option value="12:00 PM">12:00 PM</option>
+              <option value="01:00 PM">01:00 PM</option>
+              <option value="02:00 PM">02:00 PM</option>
+              <option value="03:00 PM">03:00 PM</option>
+              <option value="04:00 PM">04:00 PM</option>
+              <option value="05:00 PM">05:00 PM</option>
+              <option value="06:00 PM">06:00 PM</option>
+              <option value="07:00 PM">07:00 PM</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group form-group-full">
+          <label for="bookNotes">Additional Notes <span class="optional">(optional)</span></label>
+          <textarea id="bookNotes" rows="3" placeholder="Any special requests or preferences..."></textarea>
+        </div>
+        <button type="submit" class="booking-form-submit">Send via WhatsApp →</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js?v=32"></script>
+</body>
+
+</html>

@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>صالون رنا للتجميل — أظافر، شعر وعناية بالبشرة | مسقط، عُمان</title>
+  <meta name="description"
+    content="صالون رنا للتجميل — خدمات احترافية للأظافر، تصفيف الشعر، العناية بالبشرة والسبا في القرم، مسقط، عُمان. احجز عبر واتساب.">
+
+  <!-- Google Fonts: Jost -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css?v=46">
+</head>
+
+<body>
+
+  <!-- ── LOADER ──────────────────────────────── -->
+  <div id="loader">
+    <video id="loaderVideo" autoplay muted playsinline></video>
+    <button id="skipBtn" class="loader-skip">تخطي ✦</button>
+  </div>
+
+  <!-- ── NAVBAR ──────────────────────────────── -->
+  <div id="navOverlay" class="nav-overlay"></div>
+  <nav id="navbar" class="navbar">
+    <div class="nav-logo">
+      <a href="#">
+        <img src="assets/logo_transparent.png?v=3" alt="صالون رنا للتجميل">
+      </a>
+    </div>
+    <button id="menuToggle" class="menu-toggle" aria-label="Menu">
+      <span class="menu-bar"></span>
+      <span class="menu-bar"></span>
+      <span class="menu-bar"></span>
+    </button>
+    <ul class="nav-links">
+      <li class="nav-links-lang"><a href="index.html" class="lang-toggle">English</a></li>
+      <li><a href="#about">من نحن</a></li>
+      <li><a href="#services">خدماتنا</a></li>
+      <li><a href="#gallery">معرض</a></li>
+      <li><a href="#reviews">آراء العملاء</a></li>
+      <li class="nav-links-cta"><a href="#" onclick="openBookingModal(); return false;">احجز الآن</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="#" onclick="openBookingModal(); return false;" class="nav-cta">احجز الآن</a>
+      <a href="index.html" class="lang-toggle-desktop">English</a>
+    </div>
+  </nav>
+
+  <!-- ── HERO ────────────────────────────────── -->
+  <section id="hero">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-gradient"></div>
+
+    <!-- Top-left: Brand info -->
+    <div class="hero-info-left">
+      <div class="hero-overline">الشعر · الأظافر · الوجه والعيون · المكياج · الجسم · الأطفال</div>
+      <div class="hero-brand-name">صالون رنا للتجميل</div>
+      <p class="hero-tagline">لأنكِ واحدة من مليون ✨<br>حيث يلتقي الجمال بالفخامة في رنا في قلب مسقط.</p>
+      <div class="hero-est">+10K عميلة</div>
+    </div>
+
+    <!-- Bottom-right: Location & CTA -->
+    <div class="hero-info-right">
+      <div class="hero-location">مسقط، عُمان</div>
+      <div class="hero-branches">القرم (فندق دبل تري من هيلتون)</div>
+      <div class="hero-hours">مفتوح يومياً · 10:00 ص – 8:00 م</div>
+      <a href="#" onclick="openBookingModal(); return false;" class="hero-book">
+        احجز عبر واتساب
+        <span class="hero-book-arrow">←</span>
+      </a>
+    </div>
+
+    <!-- Bottom-center: Stats (visible on mobile only) -->
+    <div class="hero-info-bottom">
+      <div class="hero-est">+10K عميلة</div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="hero-scroll">
+      <div class="hero-scroll-line"></div>
+      <span class="hero-scroll-text">انزل</span>
+    </div>
+  </section>
+
+  <!-- ── MARQUEE ──────────────────────────────── -->
+  <div class="marquee-section">
+    <div class="marquee-track">
+      <div class="marquee-item"><span>✦</span> الشعر</div>
+      <div class="marquee-item"><span>✦</span> الأظافر</div>
+      <div class="marquee-item"><span>✦</span> الوجه والعيون</div>
+      <div class="marquee-item"><span>✦</span> المكياج</div>
+      <div class="marquee-item"><span>✦</span> الجسم</div>
+      <div class="marquee-item"><span>✦</span> الأطفال</div>
+      <div class="marquee-item"><span>✦</span> الشعر</div>
+      <div class="marquee-item"><span>✦</span> الأظافر</div>
+      <div class="marquee-item"><span>✦</span> الوجه والعيون</div>
+      <div class="marquee-item"><span>✦</span> المكياج</div>
+      <div class="marquee-item"><span>✦</span> الجسم</div>
+      <div class="marquee-item"><span>✦</span> الأطفال</div>
+    </div>
+    <div class="marquee-track" aria-hidden="true">
+      <div class="marquee-item"><span>✦</span> الشعر</div>
+      <div class="marquee-item"><span>✦</span> الأظافر</div>
+      <div class="marquee-item"><span>✦</span> الوجه والعيون</div>
+      <div class="marquee-item"><span>✦</span> المكياج</div>
+      <div class="marquee-item"><span>✦</span> الجسم</div>
+      <div class="marquee-item"><span>✦</span> الأطفال</div>
+      <div class="marquee-item"><span>✦</span> الشعر</div>
+      <div class="marquee-item"><span>✦</span> الأظافر</div>
+      <div class="marquee-item"><span>✦</span> الوجه والعيون</div>
+      <div class="marquee-item"><span>✦</span> المكياج</div>
+      <div class="marquee-item"><span>✦</span> الجسم</div>
+      <div class="marquee-item"><span>✦</span> الأطفال</div>
+    </div>
+  </div>
+
+  <!-- ── ABOUT ────────────────────────────────── -->
+  <section id="about">
+    <div class="about-visual reveal">
+      <div class="about-img-frame">
+        <img src="assets/Rana_beauty_salon_about.jpeg" alt="Rana Beauty Salon Interior">
+      </div>
+    </div>
+    <div class="about-text">
+      <div class="about-text-top reveal">®️ علامة تجارية مسجلة · مسقط، عُمان</div>
+      <h2 class="about-heading reveal reveal-delay-1">حيث يلتقي الجمال<br>بـ<em>الفخامة</em></h2>
+      <p class="about-body reveal reveal-delay-2">
+        في صالون رنا للتجميل، نقدم مجموعة متكاملة من خدمات الجمال الفاخرة المصممة خصيصاً لتناسب أسلوبك الفريد. يقع صالوننا في فندق دبل تري من هيلتون بالقرم، ليوفر لكِ ملاذاً أنيقاً يجمع بين الجمال والاسترخاء التام. لأنكِ واحدة من مليون ✨
+      </p>
+      <p class="about-body reveal reveal-delay-3">
+        بدءاً من تصفيف الشعر المبتكر وفن الأظافر الراقي، إلى تركيب الرموش الاحترافي، المكياج، وجلسات سبا الجسم المجددة للحيوية، يكرس فريقنا من الخبيرات جهوده لإبراز إشراقتك الطبيعية.
+      </p>
+      <div class="about-divider reveal"></div>
+      <div class="about-features reveal">
+        <div class="about-feature">الشعر والأظافر</div>
+        <div class="about-feature">الوجه والعيون</div>
+        <div class="about-feature">المكياج والجسم</div>
+      </div>
+      <div class="about-stats reveal">
+        <div class="about-stat-item">
+          <span class="about-stat-value">سنوات من</span>
+          <span class="about-stat-desc">الخبرة</span>
+        </div>
+        <div class="about-stat-item">
+          <span class="about-stat-value">+10K</span>
+          <span class="about-stat-desc">عميلة تم خدمتهم</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SERVICES ─────────────────────────────── -->
+  <section id="services">
+    <div class="section-header reveal">
+      <div class="section-overline">ماذا نقدم</div>
+      <h2 class="section-title"><em>خدماتنا</em></h2>
+    </div>
+    <!-- Category Cards Grid in Arabic -->
+    <div class="category-cards-grid">
+
+      <!-- ─── CATEGORY CARD 1: HAIR ─── -->
+      <div class="category-card" id="card-hair">
+        <div class="category-card-header">
+          <img class="category-card-bg" src="assets/service_cat_hair.png" alt="خدمات الشعر">
+          <div class="category-card-overlay"></div>
+          <div class="category-card-header-content">
+            <span class="category-card-num">01</span>
+            <div class="category-card-titles">
+              <h3 class="category-card-title">الشعر</h3>
+              <p class="category-card-desc">العناية والتصفيف · الصبغة والتركيبات · العلاجات المميزة</p>
+            </div>
+            <span class="category-card-action">عرض الخدمات</span>
+          </div>
+        </div>
+        <div class="category-card-content">
+          <div class="category-card-content-inner">
+            <div class="subcategory-banner">
+              <img src="assets/service_hair_styling.png" alt="العناية والتصفيف">
+            </div>
+            <div class="services-subcategory">العناية والتصفيف</div>
+            <div class="services-list">
+              <div class="service-item">
+                <div class="service-item-name">قص شعر وتصفيف</div>
+                <div class="service-item-duration">40 دقيقة – ساعة و15 دقيقة</div>
+                <div class="service-item-price">تبدأ من 15 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">أطراف الشعر (Trim)</div>
+                <div class="service-item-duration">20 دقيقة – 45 دقيقة</div>
+                <div class="service-item-price">تبدأ من 5 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">تحديد حول الوجه (Face Frame)</div>
+                <div class="service-item-duration">ساعتان</div>
+                <div class="service-item-price">20 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">سشوار</div>
+                <div class="service-item-duration">30 دقيقة – ساعة</div>
+                <div class="service-item-price">تبدأ من 10 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">سشوار غير محدود (شهر واحد)</div>
+                <div class="service-item-duration">ساعة</div>
+                <div class="service-item-price">35 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">ويفي ريترو بابيليس</div>
+                <div class="service-item-duration">ساعة – ساعتان و30 دقيقة</div>
+                <div class="service-item-price">تبدأ من 25 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">تسريحة شعر مرتفعة (Upstyles)</div>
+                <div class="service-item-duration">ساعة و30 دقيقة – ساعتان</div>
+                <div class="service-item-price">تبدأ من 20 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">استشارة شعر</div>
+                <div class="service-item-duration">10 دقائق</div>
+                <div class="service-item-price">مجاناً</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">غسيل شعر</div>
+                <div class="service-item-duration">15 دقيقة</div>
+                <div class="service-item-price">3 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">تنظيف وتنعيم أطراف الشعر (Dust Cleaning)</div>
+                <div class="service-item-duration">ساعة</div>
+                <div class="service-item-price">20 ر.ع.</div>
+              </div>
+            </div>
+
+            <div class="services-subcategory">الصبغة والتركيبات</div>
+            <div class="services-list">
+              <div class="service-item">
+                <div class="service-item-name">صبغة جذور</div>
+                <div class="service-item-duration">ساعتان</div>
+                <div class="service-item-price">20 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">صبغة كاملة للكل</div>
+                <div class="service-item-duration">ساعة و30 دقيقة</div>
+                <div class="service-item-price">تبدأ من 25 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">تونر للشعر</div>
+                <div class="service-item-duration">40 دقيقة</div>
+                <div class="service-item-price">تبدأ من 10 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">خصل هايلايت محددة (Highlight Frame)</div>
+                <div class="service-item-duration">ساعتان</div>
+                <div class="service-item-price">20 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">هايلايت جزئي (Partial)</div>
+                <div class="service-item-duration">3 ساعات</div>
+                <div class="service-item-price">تبدأ من 20 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">هايلايت كامل للرأس</div>
+                <div class="service-item-duration">4 ساعات و30 دقيقة – 5 ساعات</div>
+                <div class="service-item-price">تبدأ من 35 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">تركيب وصلات شعر (Extensions)</div>
+                <div class="service-item-duration">ساعة</div>
+                <div class="service-item-price">تبدأ من 50 ر.ع.</div>
+              </div>
+            </div>
+
+            <div class="services-subcategory">العلاجات المميزة</div>
+            <div class="services-list">
+              <div class="service-item discount">
+                <div class="service-item-name">
+                  كيراتين على الطريقة البرازيلية
+                  <span class="price-discount-badge">وفر 20%</span>
+                </div>
+                <div class="service-item-duration">ساعتان و30 دقيقة – 5 ساعات</div>
+                <div class="service-item-price">
+                  <span class="price-old">35 ر.ع.</span>
+                  <span class="price-current">تبدأ من 28 ر.ع.</span>
+                </div>
+              </div>
+              <div class="service-item discount">
+                <div class="service-item-name">
+                  بوتوكس عضوي (Organic Botox)
+                  <span class="price-discount-badge">وفر 20%</span>
+                </div>
+                <div class="service-item-duration">ساعة و30 دقيقة – ساعتان و30 دقيقة</div>
+                <div class="service-item-price">
+                  <span class="price-old">25 ر.ع.</span>
+                  <span class="price-current">تبدأ من 20 ر.ع.</span>
+                </div>
+              </div>
+              <div class="service-item discount">
+                <div class="service-item-name">
+                  علاج البروتين
+                  <span class="price-discount-badge">وفر 20%</span>
+                </div>
+                <div class="service-item-duration">ساعتان و30 دقيقة – 4 ساعات و30 دقيقة</div>
+                <div class="service-item-price">
+                  <span class="price-old">30 ر.ع.</span>
+                  <span class="price-current">تبدأ من 24 ر.ع.</span>
+                </div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">علاج لتجديد الشعر (Renewal)</div>
+                <div class="service-item-duration">ساعة</div>
+                <div class="service-item-price">تبدأ من 20 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">ترطيب عميق للشعر</div>
+                <div class="service-item-duration">ساعة</div>
+                <div class="service-item-price">تبدأ من 20 ر.ع.</div>
+              </div>
+              <div class="service-item discount">
+                <div class="service-item-name">
+                  العناية بفروة الرأس
+                  <span class="price-discount-badge">وفر 20%</span>
+                </div>
+                <div class="service-item-duration">ساعة</div>
+                <div class="service-item-price">
+                  <span class="price-old">20 ر.ع.</span>
+                  <span class="price-current">تبدأ من 16 ر.ع.</span>
+                </div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">علاج تساقط الشعر (5 جلسات)</div>
+                <div class="service-item-duration">30 دقيقة</div>
+                <div class="service-item-price">25 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">علاج للشعر (بعد الصبغة مباشرة)</div>
+                <div class="service-item-duration">30 دقيقة</div>
+                <div class="service-item-price">10 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">سبا الشعر الاسترخائي</div>
+                <div class="service-item-duration">30 دقيقة</div>
+                <div class="service-item-price">10 ر.ع.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ─── CATEGORY CARD 2: NAIL ─── -->
+      <div class="category-card" id="card-nail">
+        <div class="category-card-header">
+          <img class="category-card-bg" src="assets/service_cat_nail.png" alt="خدمات الأظافر">
+          <div class="category-card-overlay"></div>
+          <div class="category-card-header-content">
+            <span class="category-card-num">02</span>
+            <div class="category-card-titles">
+              <h3 class="category-card-title">الأظافر</h3>
+              <p class="category-card-desc">العناية الكلاسيكية · الجل والمانيكير الروسي · التركيبات والإصلاح</p>
+            </div>
+            <span class="category-card-action">عرض الخدمات</span>
+          </div>
+        </div>
+        <div class="category-card-content">
+          <div class="category-card-content-inner">
+            <div class="services-subcategory">العناية الكلاسيكية</div>
+            <div class="services-list">
+              <div class="service-item">
+                <div class="service-item-name">مانيكير وباديكير (بدون طلاء أظافر)</div>
+                <div class="service-item-duration">ساعة</div>
+                <div class="service-item-price">15 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">مانيكير وباديكير (طلاء عادي)</div>
+                <div class="service-item-duration">ساعة</div>
+                <div class="service-item-price">18 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">مانيكير كلاسيكي بالجهاز (بدون طلاء / طلاء عادي)</div>
+                <div class="service-item-duration">—</div>
+                <div class="service-item-price">8.5 / 10 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">باديكير كلاسيكي بالجهاز (بدون طلاء / طلاء عادي)</div>
+                <div class="service-item-duration">—</div>
+                <div class="service-item-price">8.5 / 10 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">سبا ومساج القدمين</div>
+                <div class="service-item-duration">45 دقيقة</div>
+                <div class="service-item-price">15 ر.ع.</div>
+              </div>
+            </div>
+
+            <div class="subcategory-banner">
+              <img src="assets/service_gel_manicure.png" alt="الجل والمانيكير الروسي">
+            </div>
+            <div class="services-subcategory">الجل والمانيكير الروسي</div>
+            <div class="services-list">
+              <div class="service-item">
+                <div class="service-item-name">مانيكير روسي مع طلاء جل</div>
+                <div class="service-item-duration">ساعتان</div>
+                <div class="service-item-price">18 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">باديكير سمارت روسي طلاء جل</div>
+                <div class="service-item-duration">ساعة و30 دقيقة</div>
+                <div class="service-item-price">18 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">مانيكير وباديكير (طلاء جل كامل)</div>
+                <div class="service-item-duration">ساعة</div>
+                <div class="service-item-price">38 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">مانيكير فرنش جل (French)</div>
+                <div class="service-item-duration">ساعتان</div>
+                <div class="service-item-price">19 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">تطبيق طلاء جل (بدون مانيكير / باديكير)</div>
+                <div class="service-item-duration">—</div>
+                <div class="service-item-price">11 / 12 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">طلاء أظافر عادي (Normal Polish)</div>
+                <div class="service-item-duration">20 دقيقة</div>
+                <div class="service-item-price">3 ر.ع.</div>
+              </div>
+            </div>
+
+            <div class="subcategory-banner">
+              <img src="assets/service_acrylic_extensions.png" alt="التركيبات والإصلاح">
+            </div>
+            <div class="services-subcategory">التركيبات والإصلاح</div>
+            <div class="services-list">
+              <div class="service-item">
+                <div class="service-item-name">تركيب أظافر أكريليك</div>
+                <div class="service-item-duration">ساعة</div>
+                <div class="service-item-price">25 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">تركيب أظافر بولي gel</div>
+                <div class="service-item-duration">ساعتان و45 دقيقة</div>
+                <div class="service-item-price">37 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">تركيب أطراف أظافر (جل)</div>
+                <div class="service-item-duration">ساعة و20 دقيقة</div>
+                <div class="service-item-price">19 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">مانيكير وهارد جل</div>
+                <div class="service-item-duration">ساعة و45 دقيقة</div>
+                <div class="service-item-price">27 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">إعادة تعبئة الأظافر المركبة (بدون مانيكير)</div>
+                <div class="service-item-duration">20 دقيقة</div>
+                <div class="service-item-price">8 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">إصلاح ظفر مكسور</div>
+                <div class="service-item-duration">30 دقيقة</div>
+                <div class="service-item-price">2 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">قص وبرد أظافر فقط</div>
+                <div class="service-item-duration">15 دقيقة</div>
+                <div class="service-item-price">5 ر.ع.</div>
+              </div>
+            </div>
+
+            <div class="subcategory-banner">
+              <img src="assets/service_nail_art.png" alt="رسومات وإضافات">
+            </div>
+            <div class="services-subcategory">رسومات وإضافات</div>
+            <div class="services-list">
+              <div class="service-item">
+                <div class="service-item-name">فن الأظافر ورسمها (لكل إصبع)</div>
+                <div class="service-item-duration">30 دقيقة</div>
+                <div class="service-item-price">2 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">كروم (Chrome)</div>
+                <div class="service-item-duration">15 دقيقة</div>
+                <div class="service-item-price">2 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">أومبري (Ombre)</div>
+                <div class="service-item-duration">15 دقيقة</div>
+                <div class="service-item-price">2 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">تطبيق تصميم البودرة (Powder Design)</div>
+                <div class="service-item-duration">5 دقائق</div>
+                <div class="service-item-price">3 ر.ع.</div>
+              </div>
+            </div>
+
+            <div class="services-subcategory">إزالة</div>
+            <div class="services-list">
+              <div class="service-item">
+                <div class="service-item-name">إزالة طلاء جل</div>
+                <div class="service-item-duration">30 دقيقة</div>
+                <div class="service-item-price">2 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">إزالة أظافر تركيب جل/أكريليك</div>
+                <div class="service-item-duration">20 دقيقة</div>
+                <div class="service-item-price">4 ر.ع.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ─── CATEGORY CARD 3: FACE & EYE ─── -->
+      <div class="category-card" id="card-face">
+        <div class="category-card-header">
+          <img class="category-card-bg" src="assets/service_cat_face.png" alt="خدمات الوجه والعيون">
+          <div class="category-card-overlay"></div>
+          <div class="category-card-header-content">
+            <span class="category-card-num">03</span>
+            <div class="category-card-titles">
+              <h3 class="category-card-title">الوجه والعيون</h3>
+              <p class="category-card-desc">العناية بالبشرة · تركيب الرموش · رفع وصبغ الرموش والحواجب</p>
+            </div>
+            <span class="category-card-action">عرض الخدمات</span>
+          </div>
+        </div>
+        <div class="category-card-content">
+          <div class="category-card-content-inner">
+            <div class="subcategory-banner">
+              <img src="assets/service_facials.png" alt="العناية بالبشرة">
+            </div>
+            <div class="services-subcategory">العناية بالبشرة</div>
+            <div class="services-list">
+              <div class="service-item">
+                <div class="service-item-name">هيدرا فيشيال (Hydro Facial)</div>
+                <div class="service-item-duration">45 دقيقة</div>
+                <div class="service-item-price">20 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">علاج الفيتامينات لنضارة البشرة</div>
+                <div class="service-item-duration">30 دقيقة</div>
+                <div class="service-item-price">10 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">جلسة الكولاجين للبشرة</div>
+                <div class="service-item-duration">ساعة</div>
+                <div class="service-item-price">10 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">قناع الفحم المنقي للوجه</div>
+                <div class="service-item-duration">30 دقيقة</div>
+                <div class="service-item-price">10 ر.ع.</div>
+              </div>
+            </div>
+
+            <div class="services-subcategory">تركيب الرموش</div>
+            <div class="services-list">
+              <div class="service-item">
+                <div class="service-item-name">تركيب رموش كلاسيكية (Classic)</div>
+                <div class="service-item-duration">ساعة و30 دقيقة</div>
+                <div class="service-item-price">تبدأ من 28 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">رموش فوليوم ثنائية الأبعاد (2D)</div>
+                <div class="service-item-duration">ساعة و20 دقيقة</div>
+                <div class="service-item-price">30 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">رموش فوليوم ثلاثية الأبعاد (3D)</div>
+                <div class="service-item-duration">ساعة و30 دقيقة</div>
+                <div class="service-item-price">35 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">رموش فوليوم رباعية الأبعاد (4D)</div>
+                <div class="service-item-duration">ساعة و40 دقيقة</div>
+                <div class="service-item-price">40 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">رموش ميجا فوليوم (Mega Volume)</div>
+                <div class="service-item-duration">ساعة و40 دقيقة</div>
+                <div class="service-item-price">45 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">رموش بتأثيرات خاصة (كايلي / رطبة / آيلاينر / أمريكية / كات آي)</div>
+                <div class="service-item-duration">ساعة و30 دقيقة</div>
+                <div class="service-item-price">تبدأ من 40 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">تركيب رموش لأطراف العين فقط (Corner)</div>
+                <div class="service-item-duration">ساعة</div>
+                <div class="service-item-price">15 ر.ع.</div>
+              </div>
+            </div>
+
+            <div class="services-subcategory">ريفيل رموش (Refills)</div>
+            <div class="services-list">
+              <div class="service-item">
+                <div class="service-item-name">إعادة تعبئة كلاسيك (أسبوعين)</div>
+                <div class="service-item-duration">ساعة</div>
+                <div class="service-item-price">20 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">إعادة تعبئة رموش فوليوم 2D + كايلي</div>
+                <div class="service-item-duration">ساعة</div>
+                <div class="service-item-price">22 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">إعادة تعبئة رموش فوليوم 3D</div>
+                <div class="service-item-duration">ساعة</div>
+                <div class="service-item-price">تبدأ من 25 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">إعادة تعبئة رموش ميجا فوليوم</div>
+                <div class="service-item-duration">ساعة</div>
+                <div class="service-item-price">24 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">إزالة الرموش المركبة</div>
+                <div class="service-item-duration">ساعة</div>
+                <div class="service-item-price">4 ر.ع.</div>
+              </div>
+            </div>
+
+            <div class="services-subcategory">رفع، صبغ ورسم الرموش والحواجب</div>
+            <div class="services-list">
+              <div class="service-item">
+                <div class="service-item-name">رفع ولفت الرموش (Lashing Lift)</div>
+                <div class="service-item-duration">ساعة</div>
+                <div class="service-item-price">15 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">تثبيت ومغنطة الحواجب (Lamination)</div>
+                <div class="service-item-duration">ساعة</div>
+                <div class="service-item-price">15 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">صبغة الحواجب</div>
+                <div class="service-item-duration">20 دقيقة</div>
+                <div class="service-item-price">8 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">صبغة الرموش</div>
+                <div class="service-item-duration">20 دقيقة</div>
+                <div class="service-item-price">8 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">صبغة حواجب ورموش معاً</div>
+                <div class="service-item-duration">20 دقيقة</div>
+                <div class="service-item-price">تبدأ من 5 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">رسم وتشكيل الحواجب</div>
+                <div class="service-item-duration">20 دقيقة</div>
+                <div class="service-item-price">5 ر.ع.</div>
+              </div>
+            </div>
+
+            <div class="services-subcategory">المكياج الشبه دائم</div>
+            <div class="services-list">
+              <div class="service-item">
+                <div class="service-item-name">مكياج الحواجب الدائم (تاتو/مايكروبليدنج)</div>
+                <div class="service-item-duration">ساعتان و30 دقيقة</div>
+                <div class="service-item-price">100 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">توريد الشفاه الشبه دائم</div>
+                <div class="service-item-duration">ساعة</div>
+                <div class="service-item-price">75 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">تحديد ومكياج العيون الدائم</div>
+                <div class="service-item-duration">ساعتان و30 دقيقة</div>
+                <div class="service-item-price">50 ر.ع.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ─── CATEGORY CARD 4: MAKEUP ─── -->
+      <div class="category-card" id="card-makeup">
+        <div class="category-card-header">
+          <img class="category-card-bg" src="assets/service_cat_makeup.png" alt="خدمات المكياج">
+          <div class="category-card-overlay"></div>
+          <div class="category-card-header-content">
+            <span class="category-card-num">04</span>
+            <div class="category-card-titles">
+              <h3 class="category-card-title">المكياج</h3>
+              <p class="category-card-desc">باقات العروس · مكياج المناسبات</p>
+            </div>
+            <span class="category-card-action">عرض الخدمات</span>
+          </div>
+        </div>
+        <div class="category-card-content">
+          <div class="category-card-content-inner">
+            <div class="services-subcategory">باقات العروس</div>
+            <div class="services-list">
+              <div class="service-item">
+                <div class="service-item-name">باقة العروس الكاملة (فيشيال، مانيكير وباديكير جل، حواجب، شعر، مكياج)</div>
+                <div class="service-item-duration">10 ساعات</div>
+                <div class="service-item-price">250 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">مكياج عروس</div>
+                <div class="service-item-duration">3 ساعات</div>
+                <div class="service-item-price">125 ر.ع.</div>
+              </div>
+            </div>
+
+            <div class="services-subcategory">مكياج المناسبات</div>
+            <div class="services-list">
+              <div class="service-item">
+                <div class="service-item-name">مكياج الخطوبة</div>
+                <div class="service-item-duration">ساعتان</div>
+                <div class="service-item-price">85 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">مكياج عيون عربي</div>
+                <div class="service-item-duration">ساعتان</div>
+                <div class="service-item-price">40 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">مكياج الهالوين والتنكري</div>
+                <div class="service-item-duration">ساعتان</div>
+                <div class="service-item-price">50 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">مكياج ناعم / خفيف</div>
+                <div class="service-item-duration">ساعة و30 دقيقة</div>
+                <div class="service-item-price">30 ر.ع.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ─── CATEGORY CARD 5: BODY ─── -->
+      <div class="category-card" id="card-body">
+        <div class="category-card-header">
+          <img class="category-card-bg" src="assets/service_cat_body.png" alt="خدمات الجسم">
+          <div class="category-card-overlay"></div>
+          <div class="category-card-header-content">
+            <span class="category-card-num">05</span>
+            <div class="category-card-titles">
+              <h3 class="category-card-title">الجسم</h3>
+              <p class="category-card-desc">إزالة الشعر بالشمع · إزالة شعر الوجه</p>
+            </div>
+            <span class="category-card-action">عرض الخدمات</span>
+          </div>
+        </div>
+        <div class="category-card-content">
+          <div class="category-card-content-inner">
+            <div class="services-subcategory">إزالة الشعر بالشمع (Wax)</div>
+            <div class="services-list">
+              <div class="service-item">
+                <div class="service-item-name">كامل الجسم للشمع</div>
+                <div class="service-item-duration">ساعة</div>
+                <div class="service-item-price">27 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">كامل الساقين</div>
+                <div class="service-item-duration">35 دقيقة</div>
+                <div class="service-item-price">12 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">نصف الساقين</div>
+                <div class="service-item-duration">25 دقيقة</div>
+                <div class="service-item-price">9 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">كامل الذراعين</div>
+                <div class="service-item-duration">30 دقيقة</div>
+                <div class="service-item-price">8 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">نصف الذراعين</div>
+                <div class="service-item-duration">20 دقيقة</div>
+                <div class="service-item-price">6 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">الإبطين (Underarm)</div>
+                <div class="service-item-duration">30 دقيقة</div>
+                <div class="service-item-price">3 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">منطقة البيكيني كاملة</div>
+                <div class="service-item-duration">35 دقيقة</div>
+                <div class="service-item-price">13 ر.ع.</div>
+              </div>
+            </div>
+
+            <div class="services-subcategory">إزالة شعر الوجه</div>
+            <div class="services-list">
+              <div class="service-item">
+                <div class="service-item-name">حلاقة الوجه (شفرة مخصصة)</div>
+                <div class="service-item-duration">45 دقيقة</div>
+                <div class="service-item-price">3 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">منطقة الشفة العليا (شنب)</div>
+                <div class="service-item-duration">10 دقائق</div>
+                <div class="service-item-price">2 ر.ع.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ─── CATEGORY CARD 6: KIDS ─── -->
+      <div class="category-card" id="card-kids">
+        <div class="category-card-header">
+          <img class="category-card-bg" src="assets/service_cat_kids.png" alt="خدمات الأطفال">
+          <div class="category-card-overlay"></div>
+          <div class="category-card-header-content">
+            <span class="category-card-num">06</span>
+            <div class="category-card-titles">
+              <h3 class="category-card-title">الأطفال</h3>
+              <p class="category-card-desc">قصات الشعر وتصفيفه</p>
+            </div>
+            <span class="category-card-action">عرض الخدمات</span>
+          </div>
+        </div>
+        <div class="category-card-content">
+          <div class="category-card-content-inner">
+            <div class="services-subcategory">قصات الشعر</div>
+            <div class="services-list">
+              <div class="service-item">
+                <div class="service-item-name">قص شعر للأولاد</div>
+                <div class="service-item-duration">ساعة</div>
+                <div class="service-item-price">7 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">قص شعر أطفال (أطول من 5 سم)</div>
+                <div class="service-item-duration">40 دقيقة</div>
+                <div class="service-item-price">10 ر.ع.</div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-name">قص أطراف شعر أطفال (حتى 5 سم) مع سشوار</div>
+                <div class="service-item-duration">30 دقيقة</div>
+                <div class="service-item-price">تبدأ من 8 ر.ع.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── GALLERY ──────────────────────────────── -->
+  <section id="gallery">
+    <div class="section-header reveal">
+      <div class="section-overline">أعمالنا</div>
+      <h2 class="section-title"><em>معرض الصور</em></h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item reveal">
+        <img src="assets/gallery_1.png?v=3" alt="فن الأظافر والمناكير الروسي">
+        <div class="gallery-label">الأظافر</div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-1">
+        <img src="assets/gallery_2.png?v=3" alt="تصفيف وتجفيف الشعر الفاخر">
+        <div class="gallery-label">الشعر</div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-2">
+        <img src="assets/gallery_3.png?v=3" alt="تركيب رموش احترافي">
+        <div class="gallery-label">الوجه والعيون</div>
+      </div>
+      <div class="gallery-item reveal">
+        <img src="assets/gallery_4.png?v=3" alt="مكياج سهرة فاخر">
+        <div class="gallery-label">المكياج</div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-1">
+        <img src="assets/gallery_5.png?v=3" alt="مساج للجسم وجلسة سبا فاخرة">
+        <div class="gallery-label">الجسم</div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-2">
+        <img src="assets/gallery_6.png?v=3" alt="جلسة مناكير وتدليل للأطفال">
+        <div class="gallery-label">الأطفال</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TEAM ─────────────────────────────────── -->
+  <section id="team">
+    <div class="section-header reveal">
+      <div class="section-overline">خبيراتنا</div>
+      <h2 class="section-title">تعرفي على <em>طاقمنا</em></h2>
+    </div>
+    <div class="team-grid">
+      <div class="team-member reveal">
+        <div class="team-img-wrap">
+          <img src="assets/team_mehrsa.jpeg?v=1" alt="مهرسا - خبيرة تصفيف الشعر">
+        </div>
+        <h3 class="team-name">مهرسا</h3>
+        <p class="team-role">خبيرة تصفيف الشعر</p>
+      </div>
+      <div class="team-member reveal reveal-delay-1">
+        <div class="team-img-wrap">
+          <img src="assets/team_naz.jpeg?v=1" alt="ناز - خبيرة الأظافر">
+        </div>
+        <h3 class="team-name">ناز</h3>
+        <p class="team-role">خبيرة الأظافر</p>
+      </div>
+      <div class="team-member reveal reveal-delay-2">
+        <div class="team-img-wrap">
+          <img src="assets/team_jasmina.jpeg?v=1" alt="ياسمينة - خبيرة الأظافر">
+        </div>
+        <h3 class="team-name">ياسمينة</h3>
+        <p class="team-role">خبيرة الأظافر</p>
+      </div>
+      <div class="team-member reveal">
+        <div class="team-img-wrap">
+          <img src="assets/team_fereshteh.jpeg?v=1" alt="فرشته - خبيرة الرموش">
+        </div>
+        <h3 class="team-name">فرشته</h3>
+        <p class="team-role">خبيرة الرموش</p>
+      </div>
+      <div class="team-member reveal reveal-delay-1">
+        <div class="team-img-wrap">
+          <img src="assets/team_sogol.jpg?v=1" alt="سوغول م">
+        </div>
+        <h3 class="team-name">سوغول م</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── REVIEWS ──────────────────────────────── -->
+  <section id="reviews">
+    <div class="section-header reveal">
+      <div class="section-overline">قصص العملاء</div>
+      <h2 class="section-title">ماذا <em>يقولون</em></h2>
+    </div>
+    <div class="testimonials-wrap reveal">
+      <div class="testimonial-item active">
+        <div class="testimonial-stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span
+            class="star">★</span><span class="star">★</span>
+        </div>
+        <p class="testimonial-quote">صالون رنا بيوتي هو الأفضل بلا منازع للمانيكير الروسي في مسقط! الاهتمام بالتفاصيل، النظافة، والاحترافية من فريق الأظافر لا يعلى عليها. صالوني المفضل في القرم!</p>
+        <div class="testimonial-author">— تقييم جوجل</div>
+      </div>
+      <div class="testimonial-item">
+        <div class="testimonial-stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span
+            class="star">★</span><span class="star">★</span>
+        </div>
+        <p class="testimonial-quote">خدمة لطيفة جداً وسيدات رائعات. حظيت بتجربة رائعة مع علاجات الشعر وتصفيفه. إنهم يستمعون حقاً لما تريدينه. شكراً جزيلاً لكم!</p>
+        <div class="testimonial-author">— سمارة ك. (تقييم فريشا)</div>
+      </div>
+      <div class="testimonial-item">
+        <div class="testimonial-stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span
+            class="star">★</span><span class="star">★</span>
+        </div>
+        <p class="testimonial-quote">صالون جميل وراقٍ داخل فندق دبل تري من هيلتون. خدمات طلاء الأظافر الجل الذكي والرموش ممتازة وتدوم لأسابيع. بيئة احترافية للغاية وأنيقة.</p>
+        <div class="testimonial-author">— تقييم إنستغرام</div>
+      </div>
+      <div class="testimonial-item">
+        <div class="testimonial-stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span
+            class="star">★</span><span class="star">★</span>
+        </div>
+        <p class="testimonial-quote">أوصي بشدة بزيارة صالون رنا بيوتي! طاقم العمل ترحيبي للغاية والخدمة دائماً استثنائية. لقد قمت بعمل رموشي وحواجبي هنا، وتبدو مذهلة.</p>
+        <div class="testimonial-author">— تقييم فيسبوك</div>
+      </div>
+      <div class="testimonial-item">
+        <div class="testimonial-stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span
+            class="star">★</span><span class="star">★</span>
+        </div>
+        <p class="testimonial-quote">أحببت لون شعري وتصفيفه (سشوار) تماماً! إنهم يركزون بشدة على التفاصيل ويحرصون على أن تغادري وأنت سعيدة. بسهولة أفضل صaalon تجميل في مسقط.</p>
+        <div class="testimonial-author">— تقييم جوجل</div>
+      </div>
+      <div class="testimonial-nav">
+        <button class="t-dot active" data-index="0"></button>
+        <button class="t-dot" data-index="1"></button>
+        <button class="t-dot" data-index="2"></button>
+        <button class="t-dot" data-index="3"></button>
+        <button class="t-dot" data-index="4"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── BOOKING ──────────────────────────────── -->
+  <section id="booking">
+    <div class="booking-inner">
+      <div class="section-overline reveal">احجزي زيارتك</div>
+      <h2 class="section-title reveal reveal-delay-1">احجزي <em>موعد</em></h2>
+      <p class="booking-desc reveal reveal-delay-2">
+        أرسلي لنا رسالة عبر واتساب وفريقنا سيؤكد موعدك. يقع في فندق دبل تري من هيلتون، القرم.
+      </p>
+      <div class="booking-branches reveal reveal-delay-3">
+        <div class="booking-branch">
+          <a href="https://maps.app.goo.gl/n6UYVj7jv4aNp2c46" target="_blank"
+            class="booking-branch-name">📍 القرم (فندق دبل تري من هيلتون)</a>
+          <div class="booking-branch-phone"><a href="https://wa.me/96898999262">+968 9899 9262</a></div>
+          <div class="booking-branch-hours">السبت – الخميس · 10:00 ص – 8:00 م</div>
+          <div class="booking-branch-actions">
+            <a href="#" onclick="openBookingModal('qurm'); return false;" class="btn-branch-whatsapp">احجزي عبر
+              واتساب ←</a>
+            <a href="https://maps.app.goo.gl/n6UYVj7jv4aNp2c46" target="_blank"
+              class="btn-branch-direction">الاتجاهات ←</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ───────────────────────────────── -->
+  <footer>
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">Rana Beauty Salon</div>
+        <p class="footer-tagline">خدمات مميزة للأظافر، الشعر والرموش في مسقط، عُمان. حيث يلتقي الجمال بالفخامة في قلب مسقط.</p>
+
+
+      </div>
+      <div>
+        <div class="footer-col-title">الخدمات</div>
+        <ul class="footer-links">
+          <li><a href="#services">الشعر</a></li>
+          <li><a href="#services">الأظافر</a></li>
+          <li><a href="#services">الوجه والعيون</a></li>
+          <li><a href="#services">المكياج</a></li>
+          <li><a href="#services">الجسم</a></li>
+          <li><a href="#services">الأطفال</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">تنقل</div>
+        <ul class="footer-links">
+          <li><a href="#about">من نحن</a></li>
+          <li><a href="#gallery">معرض</a></li>
+          <li><a href="#reviews">آراء</a></li>
+          <li><a href="#" onclick="openBookingModal(); return false;">احجزي الآن</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">تواصل</div>
+        <div class="footer-contact-item"><a href="https://maps.app.goo.gl/n6UYVj7jv4aNp2c46"
+            target="_blank">📍 القرم (فندق دبل تري من هيلتون)</a><br><a href="https://wa.me/96898999262">+968 9899 9262</a></div>
+        <div class="footer-contact-item">🕙 السبت – الخميس: 10:00 ص – 8:00 م</div>
+        <div class="footer-contact-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1.5" style="vertical-align:-2px;margin-right:4px">
+            <rect x="2" y="2" width="20" height="20" rx="5" />
+            <circle cx="12" cy="12" r="4" />
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+          </svg><a href="https://instagram.com/rana.beauty.om" target="_blank">@rana.beauty.om</a></div>
+        <div class="footer-contact-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1.5" style="vertical-align:-2px;margin-right:4px">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+          </svg><a href="https://www.facebook.com/590631990792744?ref=NONE_xav_ig_profile_page_web" target="_blank">Rana Beauty Salon</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 <span>Rana Beauty®</span> · أظافر، شعر وعناية بالبشرة · مسقط، عُمان</div>
+      <div class="footer-copy">Powered by <span>Land Of Fire Enterprisess</span></div>
+      <div class="footer-copy">حيث يلتقي <span>الجمال بالفخامة</span> ✨</div>
+    </div>
+  </footer>
+
+  <!-- ── BOOKING MODAL ────────────────────────── -->
+  <div id="bookingModal" class="booking-modal">
+    <div class="booking-modal-overlay"></div>
+    <div class="booking-modal-content">
+      <button class="booking-modal-close" onclick="closeBookingModal()">&times;</button>
+      <div class="booking-modal-header">
+        <div class="booking-modal-overline">احجزي زيارتك</div>
+        <h3 class="booking-modal-title">احجزي <em>موعد</em></h3>
+        <p class="booking-modal-subtitle">املئي البيانات أدناه وسنؤكد موعدك عبر واتساب.</p>
+      </div>
+      <form id="bookingForm" class="booking-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="bookName">الاسم الكامل</label>
+            <input type="text" id="bookName" placeholder="اسمك" required>
+          </div>
+          <div class="form-group">
+            <label for="bookPhone">رقم الهاتف</label>
+            <input type="tel" id="bookPhone" placeholder="+968 ..." required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="bookBranch">الفرع</label>
+            <select id="bookBranch" required>
+              <option value="qurm" selected>📍 القرم (فندق دبل تري من هيلتون)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="bookService">الخدمة</label>
+            <select id="bookService" required>
+              <option value="" disabled selected>اختاري الخدمة</option>
+              <optgroup label="الشعر">
+                <option value="Style Cut">قص شعر وتصفيف</option>
+                <option value="Trim Cut">قص أطراف الشعر</option>
+                <option value="Blow Dry">سشوار</option>
+                <option value="Hair Color">صبغة شعر</option>
+                <option value="Highlights">هايلايت</option>
+                <option value="Keratin Treatment">كيراتين</option>
+                <option value="Hair Extension">تركيب وصلات شعر</option>
+                <option value="Hair Treatment">علاج الشعر</option>
+              </optgroup>
+              <optgroup label="الأظافر">
+                <option value="Manicure &amp; Pedicure">مانيكير وباديكير</option>
+                <option value="Gel Polish">طلاء جل</option>
+                <option value="Russian Manicure">مانيكير روسي</option>
+                <option value="Acrylic Extension">تركيب أكريليك</option>
+                <option value="Nail Art">رسم أظافر</option>
+                <option value="Nail Removal">إزالة أظافر تركيب/جل</option>
+              </optgroup>
+              <optgroup label="الوجه والعيون">
+                <option value="Hydro Facial">هيدرا فيشيال</option>
+                <option value="Lash Extensions">تركيب رموش</option>
+                <option value="Lash Refill">إعادة تعبئة رموش</option>
+                <option value="Eyebrow Lamination">تثبيت/رسم حواجب</option>
+                <option value="Permanent Makeup">مكياج دائم</option>
+              </optgroup>
+              <optgroup label="المكياج">
+                <option value="Bridal Package">باقة العروس</option>
+                <option value="Bridal Makeup">مكياج عروس</option>
+                <option value="Engagement Makeup">مكياج خطوبة</option>
+                <option value="Light Makeup">مكياج ناعم</option>
+              </optgroup>
+              <optgroup label="الجسم">
+                <option value="Full Body Wax">كامل الجسم شمع</option>
+                <option value="Legs Wax">شمع للساقين</option>
+                <option value="Arms Wax">شمع للذراعين</option>
+                <option value="Bikini Wax">شمع بكيني</option>
+              </optgroup>
+              <optgroup label="الأطفال">
+                <option value="Boys Haircut">قص شعر أولاد</option>
+                <option value="Kids Haircut">قص شعر أطفال</option>
+              </optgroup>
+              <option value="Other">أخرى</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row" id="specialistRow" style="display: none;">
+          <div class="form-group" style="grid-column: 1 / -1;">
+            <label for="bookSpecialist">المختصة المفضلة <span class="optional">(اختياري)</span></label>
+            <select id="bookSpecialist">
+              <option value="" selected>بدون تفضيل</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="bookDate">التاريخ المفضل</label>
+            <input type="date" id="bookDate" required>
+          </div>
+          <div class="form-group">
+            <label for="bookTime">الوقت المفضل</label>
+            <select id="bookTime" required>
+              <option value="" disabled selected>اختاري الوقت</option>
+              <option value="10:00 AM">10:00 AM</option>
+              <option value="11:00 AM">11:00 AM</option>
+              <option value="12:00 PM">12:00 PM</option>
+              <option value="01:00 PM">01:00 PM</option>
+              <option value="02:00 PM">02:00 PM</option>
+              <option value="03:00 PM">03:00 PM</option>
+              <option value="04:00 PM">04:00 PM</option>
+              <option value="05:00 PM">05:00 PM</option>
+              <option value="06:00 PM">06:00 PM</option>
+              <option value="07:00 PM">07:00 PM</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group form-group-full">
+          <label for="bookNotes">ملاحظات إضافية <span class="optional">(اختياري)</span></label>
+          <textarea id="bookNotes" rows="3" placeholder="أي طلبات أو تفضيلات خاصة..."></textarea>
+        </div>
+        <button type="submit" class="booking-form-submit">أرسلي عبر واتساب ←</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js?v=32"></script>
+</body>
+
+</html>
