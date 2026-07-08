@@ -157,6 +157,8 @@ img {
 .nav-logo img {
   height: 98px;
   width: auto;
+  margin-top: -19px;
+  margin-bottom: -19px;
   transition: opacity 0.3s;
 }
 
