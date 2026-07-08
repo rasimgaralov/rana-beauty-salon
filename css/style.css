@@ -2639,6 +2639,10 @@ footer {
   .team-grid {
     gap: 30px 15px;
   }
+  .team-member {
+    flex: 0 0 calc(50% - 7.5px);
+    max-width: none;
+  }
   .team-img-wrap {
     width: 140px;
     height: 140px;
